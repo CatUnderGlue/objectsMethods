@@ -7,16 +7,19 @@ public class Author {
         this.lastName = lastName;
     }
 
+    @Override
     public String toString(){
         return firstName + " " + lastName;
     }
 
+    @Override
     public boolean equals(Object o){
         if (getClass() != o.getClass()) return false;
         if (hashCode() != o.hashCode()) return false;
         return toString().equals(o.toString());
     }
 
+    @Override
     public int hashCode(){
         return firstName.hashCode() + lastName.hashCode();
     }

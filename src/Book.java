@@ -9,16 +9,19 @@ public class Book {
         this.yearOfPublication = yearOfPublication;
     }
 
+    @Override
     public String toString(){
         return "Название: " + title + " Автор: " + author.toString() + " Год публикации: " + yearOfPublication;
     }
 
+    @Override
     public boolean equals(Object o){
         if (getClass() != o.getClass()) return false;
         if (hashCode() != o.hashCode()) return false;
         return toString().equals(o.toString());
     }
 
+    @Override
     public int hashCode(){
         return title.hashCode() + author.hashCode() + yearOfPublication;
     }
